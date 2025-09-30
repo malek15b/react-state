@@ -6,6 +6,7 @@ import Footer from "./Footer.tsx";
 import Navbar from "./Navbar.tsx";
 import {response} from "./rickandmorty.ts";
 import CharacterDetail from "./CharacterDetail.tsx";
+import CharacterForm from "./CharacterForm.tsx";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
                 <Route path={"/characters/:id"} element={<CharacterDetail  data={response.results} />} />
                 <Route path={"/welcome"} element={<Footer />} />
                 <Route path={"/"} element={<CharacterList  data={response.results} />} />
+                <Route path={"/form"} element={<CharacterForm  />} />
             </Routes>
         </>
     )
