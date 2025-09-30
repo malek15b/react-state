@@ -7,7 +7,7 @@ type CharacterDetailProps = {
 
 export default function CharacterDetail(props: CharacterDetailProps) {
     const param = useParams();
-    const characterId = parseInt(param.id);
+    const characterId: number = parseInt(param.id);
 
     const nav = useNavigate();
 
