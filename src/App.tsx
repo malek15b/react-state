@@ -8,6 +8,7 @@ import {response} from "./rickandmorty.ts";
 import CharacterDetail from "./CharacterDetail.tsx";
 import CharacterForm from "./CharacterForm.tsx";
 import type {Character} from "./CharacterType.ts";
+import CharacterPage from "./CharacterPage.tsx";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
                 <Route path={"/welcome"} element={<Footer />} />
                 <Route path={"/"} element={<CharacterList  data={characters} />} />
                 <Route path={"/form"} element={<CharacterForm onSubmit={onSubmit} />} />
+                <Route path={"/char"} element={<CharacterPage />} />
             </Routes>
         </>
     )

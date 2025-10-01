@@ -36,10 +36,10 @@ export default function CharacterList(props: CharacterListProps) {
                             return <p className="search-not-found mt-2 text-sm text-red-600 dark:text-red-500">
                                 <span className="font-medium">Der Name existiert nicht.</span></p>
                         }
-                        if(amount >= filtered.length) {
+                        if (amount >= filtered.length) {
                             setAmount(0)
                         }
-                        if(!showAll) {
+                        if (!showAll) {
                             filtered = filtered.slice(amount, amount + 5)
                         }
                         return filtered
