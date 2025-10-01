@@ -20,9 +20,22 @@ export default function CharacterPage() {
             .catch((error) => console.log(error))
     }
 
+    function postProject() {
+        axios.post("http://localhost:8080/api/project", {
+            "name" : "test",
+            "time" : "2025-09-30",
+            "description": "Project 123",
+            "created": "2025-09-22"
+        })
+            .then(response =>
+                console.log(response.data))
+            .catch((error) => console.log(error))
+    }
+
     return (
         <>
             <button onClick={getRick}>click me!</button>
+            <button onClick={postProject}>Post</button>
             {
                 character.id !== 0 &&
                 <div className="card">
